@@ -8,11 +8,20 @@ public func routes(_ router: Router) throws {
     }
 
 	router.get("artworks", String.parameter) { req -> String in
+		var artworks: [Artwork]
 		let code = try req.parameters.next(String.self)
-		if code == "nl" {
-			return "Dutch content"
+		switch code {
+		case "nl": artworks = Artworks.dutchArtworks
+		default: artworks = Artworks.englishArtworks
 		}
-		return "English content"
+
+		if
+			let data = try? JSONEncoder().encode(artworks),
+			let json = String(data: data, encoding: .utf8) {
+			return json
+		} else {
+			return "json generation error"
+		}
 	}
 
     // Example of configuring a controller

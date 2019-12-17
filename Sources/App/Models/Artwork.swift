@@ -25,9 +25,11 @@ struct Artist: SQLiteModel {
 final class Artwork: SQLiteModel {
     
     var id: Int?
+	var language: String?
     var title: String?
     var location: Location?
     var icon: String?
+	var iconDark: String?
     var excerpt: String?
     var thumbnailImage: String?
     var content: String?
@@ -35,11 +37,13 @@ final class Artwork: SQLiteModel {
     var artist: Artist?
 
     /// Creates a new `Artwork`.
-    init(id: Int? = nil, title: String? = nil, location: Location? = nil, icon: String? = nil, excerpt: String? = nil, thumbnailImage: String? = nil, content: String? = nil, image: String? = nil, artist: Artist? = nil) {
+	init(id: Int? = nil, language: String?, title: String? = nil, location: Location? = nil, icon: String? = nil, iconDark: String? = nil, excerpt: String? = nil, thumbnailImage: String? = nil, content: String? = nil, image: String? = nil, artist: Artist? = nil) {
         self.id = id
+		self.language = language
         self.title = title
         self.location = location
         self.icon = icon
+		self.iconDark = iconDark
         self.excerpt = excerpt
         self.thumbnailImage = thumbnailImage
         self.content = content
