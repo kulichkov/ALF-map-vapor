@@ -6,11 +6,23 @@ public func routes(_ router: Router) throws {
     router.get { req in
         return "It works!"
     }
-    
-    // Basic "Hello, world!" example
-    router.get("hello") { req in
-        return "Hello, world!"
-    }
+
+	router.get("artworks", String.parameter) { req -> String in
+		var artworks: [Artwork]
+		let code = try req.parameters.next(String.self)
+		switch code {
+		case "nl": artworks = Artworks.dutchArtworks
+		default: artworks = Artworks.englishArtworks
+		}
+
+		if
+			let data = try? JSONEncoder().encode(artworks),
+			let json = String(data: data, encoding: .utf8) {
+			return json
+		} else {
+			return "json generation error"
+		}
+	}
 
     // Example of configuring a controller
     let artworkController = ArtworkController()
