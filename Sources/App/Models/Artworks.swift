@@ -22,8 +22,12 @@ extension Artworks {
 			title: "All the light you see",
 			location: Location(
 				id: 246,
-				lat: 4.9141258533172998,
-				lng: 52.373759713654003),
+				lat: 52.373759713654003,
+				lng: 4.9141258533172998),
+			viewPoint: Location(
+				id: 246,
+				lat: 52.373485000000002,
+				lng: 4.9126719999999997),
 			icon: "https://www.amsterdamlightfestival.com/storage/artworks/November2019/All-the-light-you-see.png",
 			iconDark: "https://www.amsterdamlightfestival.com/storage/artworks/November2019/ALF-icons-kunstwerken-20.png",
 			excerpt: "Light always takes a moment to travel from one point to another – one second to cover 300,000 kilometres to be precise – and to reach our eyes. The travel time varies from, for example, eight minutes for the light from the sun to reach the earth, to millions of years from a star at the edge of our universe. This means that the information that light brings us, like how long ago that distant star was born, is always dated.",
@@ -41,8 +45,12 @@ extension Artworks {
 		title: "All the light you see",
 		location: Location(
 			id: 246,
-			lat: 4.9141258533172998,
-			lng: 52.373759713654003),
+			lat: 52.373759713654003,
+			lng: 4.9141258533172998),
+		viewPoint: Location(
+			id: 246,
+			lat: 52.373485000000002,
+			lng: 4.9126719999999997),
 		icon: "https://www.amsterdamlightfestival.com/storage/artworks/November2019/All-the-light-you-see.png",
 		iconDark: "https://www.amsterdamlightfestival.com/storage/artworks/November2019/ALF-icons-kunstwerken-20.png",
 		excerpt: "Licht doet er altijd even over om van het ene punt naar het andere te reizen – om precies te zijn, één seconde per 300.000 kilometer – en dus om onze ogen te bereiken. Die reistijd varieert van bijvoorbeeld 8 minuten voor het licht dat van de zon naar de aarde wordt verzonden, tot miljoenen jaren bij de straling van een ster die zich aan de rand van ons universum bevindt. De informatie die het licht ons brengt, bijvoorbeeld hoe lang geleden die verre ster is ontstaan, is dus eigenlijk altijd oud.",
